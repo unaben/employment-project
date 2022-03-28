@@ -13,25 +13,25 @@
   grid-template-columns: auto 2fr 0.5fr;
   height: 100%;
   place-content: center;
-  background-color: black;
-  /* border: 1px solid white; */
+  background-color: #2c2c2c;
 }
 
-.grid-auto-flow {
+.two-column-grid {
   display: grid;
-  grid-auto-flow: column;
+  grid-template-columns: auto auto;
   gap: 5px;
-  background-color: aquamarine;
 }
 
-.five-grid-template-columns {
+.four-grid-template-columns {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  text-align: -webkit-center;
 }
 
-.box {
+/* .box {
   border: 1px solid white;
-}
+} */
 
 ul li {
   text-decoration: none;
@@ -43,7 +43,7 @@ ul li {
 }
 
 span {
-  color: grey;
+  color: #8b8b8b;
 }
 
 p,
@@ -51,19 +51,30 @@ li {
   color: white;
 }
 
+.figma-logo-container {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.figma-logo {
+  margin-left: 10px;
+}
+
 .image {
-  width: auto;
+  width: fit-content;
   height: 100%;
-  background-color: lightskyblue;
+  background-color: #18a0fb;
 }
 
 button {
-  height: 30px;
-  width: 50px;
+  width: 70px;
+  height: 40px;
   border: 1px solid white;
   border-radius: 5px;
   color: white;
-  background-color: black;
+  background-color: #2c2c2c;
 }
 
 .logo-container {
@@ -73,13 +84,12 @@ button {
 .logo {
   width: auto;
   height: 100%;
-  background-color: wheat;
 }
 
 .last-header-text {
   height: 30px;
   width: 30px;
   border-radius: 100%;
-  background-color: brown;
+  background-color: #f24e1e;
   text-align: center;
 }

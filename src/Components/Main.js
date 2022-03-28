@@ -10,7 +10,7 @@ export default function Main() {
       <header className="main-header">
         <MainHeader />
       </header>
-      <section className="main-container">
+      <section className="main-holding-container">
         <GridContainer />
         <section className="table-container">
           <Table />
