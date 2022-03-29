@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import Header from "./Components/Header";
 import Main from "./Components/Main";
-import playerData from "./Components/Players.json"
+import { Context } from "./Components/Context/Context";
+import playerData from "./Components/Players.json";
 console.log("Json Data: ", playerData.Results);
 
 function App() {
-  const [jsonData, setJsonData] = useState([]);  
+  const [jsonData, setJsonData] = useState([]);
   console.log("JsonData: ", jsonData);
 
   useEffect(() => {
@@ -16,22 +17,18 @@ function App() {
         // console.log(result)
         ...result,
         ...playerData.Players.find(
-          (player) => player.playerId === result.playerId
+          (player) => player.PlayerId === result.PlayerId
         ),
       }));
     setJsonData(mergedData);
     console.log("merged: ", mergedData);
   }, []);
-
-
   return (
     <div className="App-container">
-      <header className="header">
-        <Header />
-      </header>
-      <main className="">
+      <Header />
+      <Context.Provider value={{ jsonData }}>
         <Main />
-      </main>
+      </Context.Provider>
     </div>
   );
 }
