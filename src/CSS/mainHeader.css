@@ -66,8 +66,36 @@
   justify-self: end;
  }
 
+ span{
+   display: none;
+ }
+
 }
 
-@media screen and (min-width: 480px) and (max-width: 760px){
+@media screen and (min-width: 320px) and (max-width: 470px){
+  .main-header-text{
+    display: none;
+  }
+  button{
+    font-size: xx-small;
+  }
+  .main-header-holder, .btn-signup{
+    padding: 5px;
+  }
+}
 
+@media screen and (min-width: 240px) and (max-width: 318px){
+  .main-header-text{
+    display: none;
+  }
+  button{
+    font-size: xx-small;
+  }
+  .main-header-holder, .btn-signup{
+    padding: 1px;
+  }
+
+  .btn-signup{
+    font-size: small;
+  }
 }

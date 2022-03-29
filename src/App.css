@@ -7,3 +7,10 @@
   background-color: #e5e5e5;
   min-height: 100vh;
 }
+
+@media screen and (min-width: 240px) and (max-width: 760px) {
+  .App-container{
+    min-height: 100vh;
+  }
+  
+}

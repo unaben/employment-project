@@ -47,10 +47,24 @@ table, tbody, thead, tr, th, td {
 
   @media screen and (min-width: 320px) and (max-width: 475px){
     .score, .game{
-      display: none;
-      background-color: bisque;
+      display: none;      
     }
-    .name{
+    .name, .index{
       font-size: small;
     }
+  }
+
+  @media screen and (min-width: 240px) and (max-width: 318px){
+    .score, .game{
+      display: none;     
+    }
+    .name, .index, .font h3{
+      font-size: xx-small;
+    }
+    img{
+      width: 10px;
+      height: 10px;
+    }
+
+  
   }

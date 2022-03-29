@@ -15,13 +15,13 @@ export default function Table() {
         <thead className="table-header">
           <tr>
             <th
-              className="grid-auto-flow"
+              className="grid-auto-flow font"
               onClick={() => sortingColumn("PlayerId")}
             >
               <h3 style={{ fontSize: "bold", color: "black" }}>Position</h3>
               <img src={arrow} alt="downarrow-icon" />
             </th>
-            <th onClick={() => sortingColumn("Name")}>
+            <th className="font" onClick={() => sortingColumn("Name")}>
               <h3>Player Name</h3>
             </th>
             <th className="game" onClick={() => sortingColumn("GamesPlayed")}>
@@ -38,7 +38,7 @@ export default function Table() {
             return (
               <>
                 <tr key={index}>
-                  <td>
+                  <td className="index">
                     {index + 1}.
                     {index + 1 === 1 && (
                       <img src={firstTrophy} alt="trophy-img" />
