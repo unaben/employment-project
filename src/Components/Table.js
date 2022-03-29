@@ -3,28 +3,32 @@ import "../CSS/table.css";
 import firstTrophy from "../image/award.png";
 import secondTrophy from "../image/achievement.png";
 import thirdTrophy from "../image/trophy.png";
+import arrow from "../image/downward-arrow.png";
 import { Context } from "./Context/Context";
 
 export default function Table() {
-  const { jsonData } = useContext(Context);
-  console.log("Inside table Func: ", jsonData);
+  const { jsonData, sortingColumn } = useContext(Context);
   return (
     <div>
-    <h3>Results</h3>
+      <h3>Results</h3>
       <table>
         <thead className="table-header">
           <tr>
-            <th>
-              <h3>Position</h3>
+            <th
+              className="grid-auto-flow"
+              onClick={() => sortingColumn("PlayerId")}
+            >
+              <h3 style={{ fontSize: "bold", color: "black" }}>Position</h3>
+              <img src={arrow} alt="downarrow-icon" />
             </th>
-            <th>
+            <th onClick={() => sortingColumn("Name")}>
               <h3>Player Name</h3>
             </th>
-            <th>
-              <h3>Games Played</h3>
+            <th className="game" onClick={() => sortingColumn("GamesPlayed")}>
+              <h3 className="game">Games Played</h3>
             </th>
-            <th>
-              <h3>Total Score</h3>
+            <th className="score"  onClick={() => sortingColumn("TotalScore")}>
+              <h3 className="score">Total Score</h3>
             </th>
           </tr>
         </thead>
@@ -46,9 +50,9 @@ export default function Table() {
                       <img src={thirdTrophy} alt="trophy-img" />
                     )}
                   </td>
-                  <td>{arr.Name}</td>
-                  <td>{arr.GamesPlayed}</td>
-                  <td>{arr.TotalScore}</td>
+                  <td className="name">{arr.Name}</td>
+                  <td className="game">{arr.GamesPlayed}</td>
+                  <td className="score">{arr.TotalScore}</td>
                 </tr>
               </>
             );

@@ -56,3 +56,18 @@
   color: black;
   font-weight: bolder;
 }
+
+
+@media screen and (min-width: 480px) and (max-width: 1020px) {
+ .main-header-text{
+   display: none;
+ }
+ .two-column-grid{
+  justify-self: end;
+ }
+
+}
+
+@media screen and (min-width: 480px) and (max-width: 760px){
+
+}

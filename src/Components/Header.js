@@ -40,12 +40,12 @@ export default function Header() {
             <p className="last-header-text">A</p>
           </li>
           <button>Log in</button>
-          <li>
+          <li className="end-section">
             <img src={angle} alt="angle-img" style={{ background: "white" }} />
           </li>
           <li>
-            <p className="">
-              47%{" "}
+            <p className="end-section">
+              47%
               <img
                 src={arror}
                 alt="arror-img"

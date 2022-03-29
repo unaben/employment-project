@@ -1,19 +1,16 @@
-table, caption, tbody, tfoot, thead, tr, th, td {
+table, tbody, thead, tr, th, td {
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
     font: inherit;
-    vertical-align: baseline;
-  }
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
+    /* vertical-align: baseline; */
   }
 
   table {
     border-collapse: collapse;
     width: 100%;
+    border-spacing: 0;
   }
   td, th {
     padding: 0.5rem;
@@ -27,4 +24,33 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
   .table-header{
       background-color: #e1e1e1;
+  }
+
+  .grid-auto-flow{
+      display: grid;
+      grid-auto-flow: column;
+      font: -webkit-small-control;
+      gap: 5px;
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 765px){
+    .game{
+      display: none;
+    }
+
+    td, th {
+      padding: 0.3rem;
+      text-align: left;
+      vertical-align: baseline;
+    }
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 475px){
+    .score, .game{
+      display: none;
+      background-color: bisque;
+    }
+    .name{
+      font-size: small;
+    }
   }

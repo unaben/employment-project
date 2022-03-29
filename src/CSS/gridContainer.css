@@ -13,15 +13,14 @@
 
 .child-container {
   width: 96%;
-  height: 120px; 
+  height: 120px;
   border: 1px solid gray;
   border-radius: 5px;
   padding: 10px;
-  
 }
 
-.middle-child{
-margin: 0 5px;
+.middle-child {
+  margin: 0 5px;
 }
 
 h3 {
@@ -34,18 +33,48 @@ h4 {
   font-weight: lighter;
 }
 
-.grid-auto-flow{
+.grid-auto-flow {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+}
+
+.text {
+  text-decoration: underline;
+  color: #041850;
+  font-size: x-small;
+}
+
+.left-padding {
+  padding-left: 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1020px) {
+  .first-child {
+    display: none;
+  }
+  .middle-child,
+  .last-child {
+    width: 210px;
+    background-color: aquamarine;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 765px){
+  .first-child {
+    display: none;
+  }
+  .middle-child,
+  .last-child {
+  
+    width: 125px;
+    background-color: blue;
+    justify-content: center;
+  }
+
+  .three-column-grid-container{
     display: grid;
-    grid-auto-flow: column;
-    justify-content: start;
-}
-
-.text{
-    text-decoration: underline;
-    color: #041850;
-    font-size: x-small; 
-}
-
-.left-padding{
-    padding-left: 20px;
+    grid-auto-flow: row;
+  }
 }

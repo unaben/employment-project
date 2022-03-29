@@ -93,3 +93,27 @@ button {
   background-color: #f24e1e;
   text-align: center;
 }
+
+@media screen and (min-width: 1024px) and (max-width: 1400px) {
+  .grid-container {
+    grid-template-columns: auto 1.5fr 0.5fr;
+    background-color: #f24e1e;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1020px) {
+  .grid-container {
+    grid-template-columns: auto 1fr auto;
+    background-color: lawngreen;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 765px) {
+  .end-section {
+    display: none;
+  }
+  .grid-container {
+    grid-template-columns: auto o.6fr auto;
+    background-color: bisque;
+  }
+}
