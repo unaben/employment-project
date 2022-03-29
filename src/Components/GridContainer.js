@@ -14,7 +14,7 @@ export default function GridContainer() {
           Donec rhoncus velit augue, consectetur adipiscing elit.
         </h4>
       </div>
-      <div className="child-container">
+      <div className="child-container middle-child">
         <div className="grid-auto-flow">
           <div>
             <img src={phone} alt="info-logo" />

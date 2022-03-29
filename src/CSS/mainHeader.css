@@ -30,6 +30,12 @@
   color: black;
   text-align: center;
   margin-right: 10px;
+  text-align: center;
+}
+
+.two-column-grid{
+  display: grid;
+  grid-template-columns: auto 1fr;
 }
 
 .btn-signup {
